@@ -5,8 +5,11 @@ package test;
 import java.util.ArrayList;
 import java.util.List;
 
+import view.MainPanel;
+
 
 public class Main {
+	static MainPanel mp;
 	/**
 	 * @param args
 	 * @throws Exception
@@ -19,11 +22,12 @@ public class Main {
 		 * ANTLRFileStream(args[0])); else lexer = new UNALangLexer(new
 		 * ANTLRInputStream(System.in));
 		 */
-		
+		mp = new MainPanel();
 		String base = "C:\\Users\\Ace\\Documents\\Workspace\\Estocasticos\\";
 		List<String> booksForTraining = new ArrayList<String>();
 		booksForTraining.add(base + "src\\examples\\basico.py");
-		booksForTraining.add(base + "src\\examples\\MONTE.py");
+		booksForTraining.add(mp.getText());
+		//booksForTraining.add(base + "src\\examples\\MONTE.py");
 		GLCP glcp = new GLCP (booksForTraining);
 		double result = glcp.getProb(base + "src\\examples\\basico.py");
 		System.out.println("RESULT + "+ result);

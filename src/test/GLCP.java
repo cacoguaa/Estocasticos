@@ -66,7 +66,6 @@ public class GLCP {
 		for(int i= 0; i < listener.probModule.sumRules.length; i++){
 			total += listener.probModule.sumRules[i];
 		}
-
 		return  listener.getResult()/total;
 	}
 
