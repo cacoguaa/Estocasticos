@@ -2,6 +2,7 @@ package test;
 
 
 //import de librerias de runtime de ANTLR
+import java.awt.Window;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,6 @@ import view.MainPanel;
 
 
 public class Main {
-	static MainPanel mp;
 	/**
 	 * @param args
 	 * @throws Exception
@@ -21,16 +21,16 @@ public class Main {
 		 * UNALangLexer lexer; if (args.length>0) lexer = new UNALangLexer(new
 		 * ANTLRFileStream(args[0])); else lexer = new UNALangLexer(new
 		 * ANTLRInputStream(System.in));
-		 */
-		mp = new MainPanel();
-		String base = "C:\\Users\\Ace\\Documents\\Workspace\\Estocasticos\\";
-		List<String> booksForTraining = new ArrayList<String>();
+		 *
+		
+		/*String base = "C:\\Users\\Ace\\Documents\\Workspace\\Estocasticos\\";
+				List<String> booksForTraining = new ArrayList<String>();
 		booksForTraining.add(base + "src\\examples\\basico.py");
 		booksForTraining.add(mp.getText());
 		//booksForTraining.add(base + "src\\examples\\MONTE.py");
 		GLCP glcp = new GLCP (booksForTraining);
 		double result = glcp.getProb(base + "src\\examples\\basico.py");
-		System.out.println("RESULT + "+ result);
+		System.out.println("RESULT + "+ result);*/
 		
 	}
 
