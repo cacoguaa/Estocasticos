@@ -18,12 +18,13 @@ public class Main {
 		 * ANTLRFileStream(args[0])); else lexer = new UNALangLexer(new
 		 * ANTLRInputStream(System.in));
 		 */
-		List<String> booksForTraining = new ArrayList<String>();
-		booksForTraining.add("C:\\Users\\Ace\\Documents\\Workspace\\plagio\\src\\Ejemplos\\basico.py");
-		booksForTraining.add("C:\\Users\\Ace\\Documents\\Workspace\\plagio\\src\\Ejemplos\\Planetas.py");
-		GLCP glcp = new GLCP (booksForTraining);
 		
-		float result = glcp.getProb("C:\\Users\\Ace\\Documents\\Workspace\\plagio\\src\\Ejemplos\\basico.py");
+		String base = "C:\\Users\\Ace\\Documents\\Workspace\\Estocasticos\\";
+		List<String> booksForTraining = new ArrayList<String>();
+		booksForTraining.add(base + "src\\examples\\basico.py");
+		booksForTraining.add(base + "src\\examples\\Planetas.py");
+		GLCP glcp = new GLCP (booksForTraining);
+		float result = glcp.getProb(base + "src\\examples\\basico.py");
 		System.out.println("RESULT + "+ result);
 		
 	}
