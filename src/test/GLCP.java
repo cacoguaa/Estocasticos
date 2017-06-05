@@ -44,7 +44,7 @@ public class GLCP {
 								// las probabilidades
 	}
 
-	public float getProb(String codeIn) throws Exception {
+	public double getProb(String codeIn) throws Exception {
 		listener.setResult(0);
 		System.out.println("####### Calculating #####");
 		input = new ANTLRFileStream(codeIn);
@@ -62,7 +62,12 @@ public class GLCP {
 		System.out.println(listener.probModule.toStringPositive());
 
 		System.out.println("####### End Calculating #####");
-		return  listener.getResult();
+		int total = 0;
+		for(int i= 0; i < listener.probModule.sumRules.length; i++){
+			total += listener.probModule.sumRules[i];
+		}
+
+		return  listener.getResult()/total;
 	}
 
 }

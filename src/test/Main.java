@@ -23,9 +23,9 @@ public class Main {
 		String base = "C:\\Users\\Ace\\Documents\\Workspace\\Estocasticos\\";
 		List<String> booksForTraining = new ArrayList<String>();
 		booksForTraining.add(base + "src\\examples\\basico.py");
-		booksForTraining.add(base + "src\\examples\\Planetas.py");
+		booksForTraining.add(base + "src\\examples\\MONTE.py");
 		GLCP glcp = new GLCP (booksForTraining);
-		float result = glcp.getProb(base + "src\\examples\\basico.py");
+		double result = glcp.getProb(base + "src\\examples\\basico.py");
 		System.out.println("RESULT + "+ result);
 		
 	}
